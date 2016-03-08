@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>About This Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li  class="active"><a href="/about">About This Data Set</a></li>
+            <li><a href="/quality">Data Quality</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	<h1>Accountability: About This Data Set</h1>
+        <p>The data set was collected over the period of 2 weeks. The information that was collected over the two weeks was my locations with dates and what activity I as doing. The activity is broken down into three types: still, titling and in-vehicle. Other features of the dataset that were not a part of this project but are definitely of interest of future investigation were: "Skin Temperature", More measure of accuracy of the device that collects the data. The device used to collect was: <a href="https://www.microsoft.com/microsoft-band/en-us">Click Here</a> The image below gives the tables that are included within the dataset.</a></p>
+      </div>
+
+      <img src="{{image2}}" height="600" width="400"></br>
+
+    
+      <div class="page-header">
+	<h2> </h2>
+	 
+  <h2> This data is located in the google cloud server. The flask application tries to access the cloud mysql using the following lines of code in python: </h2>
+    <img src="{{image3}}" height="150" width="400"></br>
+    <h2>This is what the SQL google cloud instance looks like</h2>
+   <img src="{{image6}}" height="500" width="500"></br>
+      </div>
+      
+      <div class="page-header">
+	<h2>Who has access to it?</h2>
+	<p> Only the users I add to the SQL Cloud database have access to the database. The authentication of the user is done on the basis of MD5 or RSA based hashed password that is stored in the googler server and is known to the owner of the google SQL storage space. Below is the lost of users that I have allowed:</p>
+      </div>
+  <img src="{{image1}}" height="500" width="600"></br>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+  </body>
+</html>

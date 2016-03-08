@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Quality of This Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About This Data Set</a></li>
+            <li class="active"><a href="/quality">Data Quality</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	      <h1>Quality: About This Data Set</h1>
+        <p>The data set was collected over the period of 2 weeks. The information that was collected over the two weeks was my locations with dates and what activity I as doing. The activity is broken down into three types: still, titling and in-vehicle. Other features of the dataset that were not a part of this project but are definitely of interest of future investigation were: "Skin Temperature", More measure of accuracy of the device that collects the data. The device used to collect was: <a href="https://www.microsoft.com/microsoft-band/en-us">Click Here</a></a></p>
+      </div>
+
+    
+      <div class="page-header">
+      	<h2>Is the data complete?</h2>
+      	<p>The data is not complete, as can be seen from the pie chart below. A concern this could raise was that </p>
+        <iframe width="900" height="700" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col6%2C+count()+from+1nbYKsbldNMG-kj1CRpHVCHujion2y2orsM2RwtY9+group+by+col6+order+by+count()+asc+limit+100&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=900&amp;height=600"></iframe>
+      </div>
+      
+      <div class="page-header">
+    	<h2>Is the data coherent?</h2>
+    	<p> The data is coherent to some exntent. I found a significant number of outliers in the accuracy_of_location_measurement plot (as can be seen below) which means, that accuracy can still be doubtful</p>
+          </div>
+
+      <img src="{{image5}}" height="400" width="500"></br>
+
+
+      <div class="page-header">
+	<h2>Is the data correct?</h2>
+	<p>Yes, the data is coherent because the plot of locations from the main page of this website match with the activties mentioned in my google calendar.</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+  </body>
+</html>

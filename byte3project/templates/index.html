@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Mobile Byte Tutorial</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet"> 
+  </head>
+
+  <body role="document">
+
+        <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+      <li><a href="quality">Data Quality</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Anisha Kaul's Activity Data from her Nexus 5 Android Phone</h1>
+      </div>
+
+      <h3>Here are some key observation's that I could make from my data:</h3>
+
+      <h3>1. I had quite a nice time in Mario's on 2016-01-29 on a Friday! And then I went for a walk to ellsworth avenue the same night! Quite Interesting :D</h3>
+      <h3>2. I spend a lot of time at Hunt Library, Hamburg Hall and Squirrel Hill (This is where I live) and Pretty Much nowhere else (Welcome to CMU, duh!)</h3>
+      </br>
+   
+     <iframe width="1000" height="900" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1+from+1nbYKsbldNMG-kj1CRpHVCHujion2y2orsM2RwtY9&amp;viz=MAP&amp;h=false&amp;lat=40.44234636930862&amp;lng=-79.94319220323405&amp;t=1&amp;z=18&amp;l=col1&amp;y=3&amp;tmplt=4&amp;hml=TWO_COL_LAT_LNG"></iframe>
+    </br>
+
+     <h3>1. On Fridays, the device that collects my data suddenly starts detecting my accuracy much better than the rest of the days in the week. I found this by grouping and averaging the values of the 'accuracy' from the data I got. The deifnition of accuracy is defined in the data dictionary provided to us.</h3>
+     </br>
+
+    <iframe width="900" height="600" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col3%2C+AVERAGE(col5)+from+1nbYKsbldNMG-kj1CRpHVCHujion2y2orsM2RwtY9+group+by+col3+order+by+AVERAGE(col5)+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=900&amp;height=600"></iframe>
+
+    </br>
+    <h3>1. Well! Turns out not that diligent after all. Most of my data is 'NA', which of course can happen in any data collection campaign.</h3>
+    <h3>2. I spend most of my time, Sitting still. Hard to believe that, to be honest!</h3>
+    </br>
+
+    <iframe width="900" height="700" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;q=select+col6%2C+count()+from+1nbYKsbldNMG-kj1CRpHVCHujion2y2orsM2RwtY9+group+by+col6+order+by+count()+asc+limit+100&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=900&amp;height=600"></iframe>
+
+
+
+      <h2>20 row Sample of my "Location Vs Activity Name" </h2>
+      <div id="animals">
+         <table class="table table-striped">
+          <thead>
+            <tr>
+              {% for header in locactcol_names %}
+                <th>{{ header }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>  
+            {% for row in locactrows %}
+              <tr>
+                {% for r in row %}
+                  <td>{{ r }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>  
+        </table>
+      </div>
+
+
+      <h2>20 row Sample of my "Location Vs Activity Name" </h2>
+      <div id="animals">
+         <table class="table table-striped">
+          <thead>
+            <tr>
+              {% for header in timeloct_names %}
+                <th>{{ header }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>  
+            {% for row in timeloctrows %}
+              <tr>
+                {% for r in row %}
+                  <td>{{ r }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>  
+        </table>
+      </div>
+
+
+   <div class="page-header">
+  
+      </div> <!-- /page-header -->
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <script>
+       
+     
+
+    </script>
+  </body>
+</html>
